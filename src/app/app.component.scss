@@ -1,0 +1,93 @@
+.bg-image {
+    background-image: linear-gradient(180deg, rgba(15, 3, 3, 0.624) 99.99%, rgba(255, 255, 255, 0) 100%), url("../assets/land-page-background.jpg");
+    
+    /* Add the blur effect */
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    
+    /* Full height */
+    height: 100vh; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text {
+    box-sizing: border-box;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bg-text p{
+    color: #0052AE;
+}
+
+.bg-text a{
+    position: relative;
+    overflow: hidden;
+    padding: 10px 30px;
+    margin: 0 15px;
+    color: #0052AE;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    transition: 0.5s;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #0052AE;
+        border-left: 2px solid #0052AE;
+        transition: 0.5s;
+    }
+
+    &:hover{
+        background-color: #0052AE;
+        color: #111;
+        box-shadow: 0 0 50px #0052AE;
+        transition-delay: 0.2s;
+    }
+
+    &:hover::before{
+        width: 90%;
+        height: 90%;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #0052AE;
+        border-right: 2px solid #0052AE;
+        transition: 0.5s;
+    }
+
+    &:hover::after{
+        width: 90%;
+        height: 90%;
+    }
+}
